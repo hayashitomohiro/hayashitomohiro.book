@@ -61,7 +61,7 @@ const BOOKS = [
     amazon: "https://www.amazon.co.jp/s?k=アフターミュージッキング+毛利嘉孝",
     description: "",
     impression: "",
-    status: "read"
+    status: "reading"
   },
   {
     title: "クリティカル・ワード　メディア論",
@@ -72,7 +72,7 @@ const BOOKS = [
     amazon: "https://www.amazon.co.jp/s?k=クリティカル・ワード+メディア論",
     description: "",
     impression: "",
-    status: "read"
+    status: "reading"
   },
   {
     title: "超解読！はじめてのカント『純粋理性批判』",
@@ -83,7 +83,7 @@ const BOOKS = [
     amazon: "https://www.amazon.co.jp/s?k=超解読！はじめてのカント+純粋理性批判",
     description: "",
     impression: "",
-    status: "read"
+    status: "reading"
   },
   {
     title: "ベルクソン入門",
@@ -94,7 +94,7 @@ const BOOKS = [
     amazon: "https://www.amazon.co.jp/s?k=ベルクソン入門+村山達也",
     description: "",
     impression: "",
-    status: "read"
+    status: "unread"
   },
   {
     title: "知覚の現象学",
@@ -105,7 +105,7 @@ const BOOKS = [
     amazon: "https://www.amazon.co.jp/s?k=知覚の現象学+メルロ＝ポンティ",
     description: "",
     impression: "",
-    status: "read"
+    status: "unread"
   },
   {
     title: "眼がスクリーンになるとき",
@@ -116,7 +116,7 @@ const BOOKS = [
     amazon: "https://www.amazon.co.jp/s?k=眼がスクリーンになるとき+福尾匠",
     description: "",
     impression: "",
-    status: "read"
+    status: "unread"
   },
   {
     title: "技術哲学入門",
@@ -127,7 +127,7 @@ const BOOKS = [
     amazon: "https://www.amazon.co.jp/s?k=技術哲学入門+ドン・アイディ",
     description: "",
     impression: "",
-    status: "read"
+    status: "unread"
   },
   {
     title: "小さなデザインの哲学",
@@ -138,7 +138,7 @@ const BOOKS = [
     amazon: "https://www.amazon.co.jp/s?k=小さなデザインの哲学+フルッサー",
     description: "",
     impression: "",
-    status: "read"
+    status: "reading"
   },
   {
     title: "写真の哲学のために",
@@ -149,7 +149,7 @@ const BOOKS = [
     amazon: "https://www.amazon.co.jp/s?k=写真の哲学のために+フルッサー",
     description: "",
     impression: "",
-    status: "read"
+    status: "reading"
   },
   {
     title: "写真論",
@@ -160,7 +160,7 @@ const BOOKS = [
     amazon: "https://www.amazon.co.jp/s?k=写真論+スーザン・ソンタグ",
     description: "",
     impression: "",
-    status: "read"
+    status: "reading"
   },
   {
     title: "写真のアルケオロジー",
@@ -171,7 +171,7 @@ const BOOKS = [
     amazon: "https://www.amazon.co.jp/s?k=写真のアルケオロジー+バッチェン",
     description: "",
     impression: "",
-    status: "read"
+    status: "unread"
   },
   {
     title: "世界の調律",
@@ -182,7 +182,7 @@ const BOOKS = [
     amazon: "https://www.amazon.co.jp/s?k=世界の調律+シェーファー",
     description: "",
     impression: "",
-    status: "read"
+    status: "reading"
   },
   {
     title: "聞こえくる過去",
@@ -193,7 +193,7 @@ const BOOKS = [
     amazon: "https://www.amazon.co.jp/s?k=聞こえくる過去+ジョナサン・スターン",
     description: "",
     impression: "",
-    status: "read"
+    status: "reading"
   },
   {
     title: "パフォーマンス・アート",
@@ -204,7 +204,7 @@ const BOOKS = [
     amazon: "https://www.amazon.co.jp/s?k=パフォーマンス・アート+ゴールドバーグ",
     description: "",
     impression: "",
-    status: "read"
+    status: "unread"
   },
   {
     title: "実験音楽",
@@ -215,7 +215,7 @@ const BOOKS = [
     amazon: "https://www.amazon.co.jp/s?k=実験音楽+ゴチョーク",
     description: "",
     impression: "",
-    status: "read"
+    status: "unread"
   },
   {
     title: "現代世界における日常生活",
@@ -226,7 +226,7 @@ const BOOKS = [
     amazon: "https://www.amazon.co.jp/s?k=現代世界における日常生活+ルフェーブル",
     description: "",
     impression: "",
-    status: "read"
+    status: "unread"
   },
   {
     title: "複製技術時代の芸術",
@@ -237,7 +237,7 @@ const BOOKS = [
     amazon: "https://www.amazon.co.jp/s?k=複製技術時代の芸術+ベンヤミン",
     description: "",
     impression: "",
-    status: "read"
+    status: "unread"
   },
   {
     title: "現代写真論",
@@ -248,7 +248,7 @@ const BOOKS = [
     amazon: "https://www.amazon.co.jp/s?k=現代写真論+シャーロット・コットン",
     description: "",
     impression: "",
-    status: "read"
+    status: "reading"
   },
   {
     title: "観察者の系譜",
@@ -259,17 +259,17 @@ const BOOKS = [
     amazon: "https://www.amazon.co.jp/s?k=観察者の系譜+ジョナサン・クレーリー",
     description: "",
     impression: "",
-    status: "read"
+    status: "unread"
   },
   {
     title: "WAYS OF BEING",
     subtitle: "人間以外の知性",
-    author: "ジェームズ・ブライドル，岩崎晋也",
+    author: "ジェームズ・ブライドル，岩崎晋也（訳）",
     year: 2024,
     origYear: 2022,
     amazon: "https://www.amazon.co.jp/s?k=WAYS+OF+BEING+ジェームズ・ブライドル",
     description: "",
     impression: "",
-    status: "read"
+    status: "unread"
   }
 ];

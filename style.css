@@ -433,7 +433,15 @@ a {
   }
 
   .detail-title {
-    font-size: 22px;
+    font-size: 19px;
+  }
+
+  .detail-subtitle {
+    font-size: 13px;
+  }
+
+  .detail-meta {
+    font-size: 12px;
   }
 
   .pager {
