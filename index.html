@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>読書の記録</title>
+<link rel="stylesheet" href="style.css" />
+</head>
+<body>
+<div class="wrap">
+
+  <header class="site-header">
+    <span class="site-header__eyebrow">Reading Log</span>
+    <h1 class="site-title">読書の記録</h1>
+    <div class="site-meta">
+      <span>作成：林朋紘</span>
+      <span class="site-meta__count" id="book-count"></span>
+    </div>
+  </header>
+
+  <ul class="book-list" id="book-list"></ul>
+
+  <footer class="site-footer">
+    order — 記載順（並び替え可）
+  </footer>
+
+</div>
+
+<script src="data.js"></script>
+<script>
+  const listEl = document.getElementById("book-list");
+  const countEl = document.getElementById("book-count");
+  countEl.textContent = BOOKS.length + " 冊";
+
+  BOOKS.forEach((book, i) => {
+    const li = document.createElement("li");
+    li.className = "book-row";
+
+    const num = String(i + 1).padStart(2, "0");
+    const yearText = book.origYear
+      ? `${book.year}<span style="opacity:.6"> (${book.origYear})</span>`
+      : `${book.year}`;
+    const status = book.status || "read";
+    const dotClass = "status-dot--" + status;
+    const dotTitle = { read: "読了", reading: "読書中", unread: "未読" }[status];
+
+    li.innerHTML = `
+      <a href="book.html?id=${i}">
+        <span class="book-row__num">${num}</span>
+        <span class="book-row__text">
+          <span class="book-row__title">${book.title}</span>
+          ${book.subtitle ? `<span class="book-row__subtitle">${book.subtitle}</span>` : ""}
+          <span class="book-row__author">${book.author}</span>
+        </span>
+        <span class="book-row__year">
+          <span class="status-dot ${dotClass}" title="${dotTitle}"></span>
+          ${yearText}
+        </span>
+      </a>
+    `;
+    listEl.appendChild(li);
+  });
+</script>
+</body>
+</html>

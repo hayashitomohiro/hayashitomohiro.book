@@ -1,0 +1,458 @@
+/* ==========================================================
+   読書の記録 ― stylesheet
+   静謐（quiet stillness）を基調に、蔵書印を思わせる朱の一点を
+   差し色として用いる。
+   ========================================================== */
+
+:root {
+  --paper: #efeae1;
+  --paper-card: #f6f2e9;
+  --ink: #26241f;
+  --ink-soft: #6b6357;
+  --ink-faint: #9c9384;
+  --line: #cdc3ac;
+  --line-soft: #ddd4bf;
+  --accent: #3e5850;      /* 深緑 - 松葉色 */
+  --accent-soft: #7e9089;
+  --stamp: #8a3a2a;       /* 朱 - 蔵書印 */
+  --stamp-soft: rgba(138, 58, 42, 0.12);
+
+  --serif-display: "Yu Mincho", "游明朝", "YuMincho", serif;
+  --font-base: "Inter", "游ゴシック体", "Yu Gothic", YuGothic,
+    "游ゴシック Medium", "Yu Gothic Medium", "Hiragino Kaku Gothic ProN",
+    "Hiragino Sans", Meiryo, sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: var(--font-base);
+  background-color: var(--paper);
+  color: var(--ink);
+  line-height: 1.9;
+  letter-spacing: 0.02em;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* subtle ruled-paper texture in the background */
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 0;
+  background-image: repeating-linear-gradient(
+    to bottom,
+    transparent 0,
+    transparent 39px,
+    rgba(38, 36, 31, 0.028) 40px
+  );
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.wrap {
+  position: relative;
+  z-index: 1;
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 72px 28px 120px;
+}
+
+/* ---------- header ---------- */
+
+.site-header {
+  margin-bottom: 56px;
+}
+
+.site-header__eyebrow {
+  display: block;
+  font-size: 11px;
+  letter-spacing: 0.32em;
+  text-transform: uppercase;
+  color: var(--stamp);
+  margin-bottom: 14px;
+}
+
+.site-title {
+  font-family: var(--font-base);
+  font-weight: 600;
+  font-size: 30px;
+  letter-spacing: 0.14em;
+  margin: 0 0 10px;
+}
+
+.site-meta {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  border-top: 1px solid var(--line);
+  padding-top: 14px;
+  font-size: 13px;
+  color: var(--ink-soft);
+}
+
+.site-meta__count {
+  font-variant-numeric: tabular-nums;
+  letter-spacing: 0.05em;
+}
+
+/* ---------- book list (home) ---------- */
+
+.book-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  border-top: 1px solid var(--line);
+}
+
+.book-row {
+  border-bottom: 1px solid var(--line);
+}
+
+.book-row a {
+  display: grid;
+  grid-template-columns: 44px 1fr auto;
+  align-items: baseline;
+  gap: 18px;
+  padding: 22px 6px;
+  transition: background-color 0.25s ease, padding-left 0.25s ease;
+}
+
+.book-row a:hover,
+.book-row a:focus-visible {
+  background-color: var(--paper-card);
+  padding-left: 14px;
+}
+
+.book-row a:focus-visible {
+  outline: 1px solid var(--accent-soft);
+  outline-offset: -2px;
+}
+
+.book-row__num {
+  font-size: 12px;
+  color: var(--ink-faint);
+  font-variant-numeric: tabular-nums;
+  letter-spacing: 0.04em;
+}
+
+.book-row__text {
+  min-width: 0;
+}
+
+.book-row__title {
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--ink);
+  margin: 0 0 6px;
+  overflow-wrap: break-word;
+}
+
+.book-row__subtitle {
+  display: block;
+  font-size: 12.5px;
+  color: var(--ink-soft);
+  font-weight: 400;
+  margin-top: 2px;
+}
+
+.book-row__author {
+  font-size: 12.5px;
+  color: var(--ink-soft);
+}
+
+.book-row__year {
+  display: flex;
+  align-items: baseline;
+  gap: 8px;
+  font-size: 12px;
+  color: var(--ink-faint);
+  white-space: nowrap;
+  text-align: right;
+  font-variant-numeric: tabular-nums;
+  align-self: start;
+  padding-top: 2px;
+}
+
+.status-dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+.status-dot--read {
+  background: var(--stamp);
+  border: 1px solid var(--stamp);
+}
+
+.status-dot--reading {
+  background: var(--accent);
+  border: 1px solid var(--accent);
+}
+
+.status-dot--unread {
+  background: transparent;
+  border: 1px dashed var(--ink-faint);
+}
+
+.site-footer {
+  margin-top: 64px;
+  font-size: 11.5px;
+  color: var(--ink-faint);
+  letter-spacing: 0.04em;
+  text-align: center;
+}
+
+/* ---------- detail page ---------- */
+
+.back-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 12.5px;
+  letter-spacing: 0.08em;
+  color: var(--ink-soft);
+  margin-bottom: 48px;
+  transition: color 0.2s ease;
+}
+
+.back-link:hover {
+  color: var(--accent);
+}
+
+.stamp {
+  width: 46px;
+  height: 46px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 11px;
+  letter-spacing: 0.01em;
+  font-weight: 600;
+  margin-bottom: 22px;
+  text-align: center;
+  line-height: 1.2;
+}
+
+.stamp--read {
+  border: 1.4px solid var(--stamp);
+  color: var(--stamp);
+  transform: rotate(-6deg);
+  background: var(--stamp-soft);
+}
+
+.stamp--reading {
+  border: 1.4px solid var(--accent);
+  color: var(--accent);
+  transform: rotate(2deg);
+  background: rgba(62, 88, 80, 0.1);
+}
+
+.stamp--unread {
+  border: 1.4px dashed var(--ink-faint);
+  color: var(--ink-faint);
+  transform: rotate(4deg);
+  background: transparent;
+}
+
+.detail-header {
+  margin-bottom: 44px;
+}
+
+.detail-title {
+  font-size: 27px;
+  font-weight: 700;
+  line-height: 1.5;
+  margin: 0 0 6px;
+  letter-spacing: 0.03em;
+}
+
+.detail-subtitle {
+  font-size: 15px;
+  font-weight: 400;
+  color: var(--ink-soft);
+  margin: 0 0 22px;
+  letter-spacing: 0.02em;
+}
+
+.detail-meta {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  font-size: 13.5px;
+  color: var(--ink-soft);
+  border-left: 2px solid var(--line);
+  padding-left: 16px;
+}
+
+.detail-meta__author {
+  color: var(--ink);
+}
+
+.detail-meta__year {
+  font-variant-numeric: tabular-nums;
+  color: var(--ink-soft);
+}
+
+.detail-body {
+  margin-top: 8px;
+}
+
+.detail-section {
+  padding: 30px 0;
+  border-bottom: 1px solid var(--line);
+}
+
+.detail-section:first-child {
+  padding-top: 0;
+}
+
+.detail-section__label {
+  display: block;
+  font-size: 11px;
+  letter-spacing: 0.28em;
+  text-transform: uppercase;
+  color: var(--stamp);
+  margin-bottom: 14px;
+}
+
+.amazon-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 14.5px;
+  font-weight: 600;
+  color: var(--accent);
+  border-bottom: 1px solid var(--accent-soft);
+  padding-bottom: 3px;
+  transition: border-color 0.2s ease, color 0.2s ease;
+}
+
+.amazon-link:hover {
+  color: var(--stamp);
+  border-color: var(--stamp);
+}
+
+.amazon-link svg {
+  width: 13px;
+  height: 13px;
+  flex-shrink: 0;
+}
+
+.detail-text {
+  font-size: 14.5px;
+  color: var(--ink);
+  white-space: pre-wrap;
+}
+
+.detail-text.is-empty {
+  color: var(--ink-faint);
+  font-style: normal;
+}
+
+/* ---------- pager ---------- */
+
+.pager {
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  align-items: center;
+  margin-top: 56px;
+  padding-top: 28px;
+  border-top: 1px solid var(--line);
+  font-size: 12.5px;
+  letter-spacing: 0.06em;
+}
+
+.pager__link {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: var(--ink-soft);
+  transition: color 0.2s ease;
+}
+
+.pager__link:hover {
+  color: var(--accent);
+}
+
+.pager__link--prev {
+  justify-self: start;
+}
+
+.pager__link--next {
+  justify-self: end;
+}
+
+.pager__link--disabled {
+  visibility: hidden;
+}
+
+.pager__home {
+  justify-self: center;
+  color: var(--stamp);
+  font-weight: 600;
+}
+
+.pager__label-title {
+  display: none;
+}
+
+/* ---------- responsive ---------- */
+
+@media (max-width: 560px) {
+  .wrap {
+    padding: 48px 20px 100px;
+  }
+
+  .site-title {
+    font-size: 24px;
+  }
+
+  .book-row a {
+    grid-template-columns: 32px 1fr;
+    gap: 12px;
+  }
+
+  .book-row__year {
+    grid-column: 2 / 3;
+    text-align: left;
+    padding-top: 4px;
+  }
+
+  .detail-title {
+    font-size: 22px;
+  }
+
+  .pager {
+    grid-template-columns: 1fr;
+    gap: 14px;
+    text-align: center;
+  }
+
+  .pager__link--prev,
+  .pager__link--next,
+  .pager__home {
+    justify-self: center;
+  }
+}
+
+/* respect reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    transition: none !important;
+    scroll-behavior: auto !important;
+  }
+}

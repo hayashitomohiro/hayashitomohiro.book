@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title id="page-title">読書の記録</title>
+<link rel="stylesheet" href="style.css" />
+</head>
+<body>
+<div class="wrap">
+
+  <a href="index.html" class="back-link">&larr; 一覧に戻る</a>
+
+  <article id="detail-root"></article>
+
+  <nav class="pager" id="pager"></nav>
+
+</div>
+
+<script src="data.js"></script>
+<script>
+  const params = new URLSearchParams(window.location.search);
+  let id = parseInt(params.get("id"), 10);
+  if (isNaN(id) || id < 0 || id >= BOOKS.length) id = 0;
+
+  const book = BOOKS[id];
+  document.getElementById("page-title").textContent = book.title + " ｜ 読書の記録";
+
+  const num = String(id + 1).padStart(2, "0");
+  const yearLine = book.origYear
+    ? `${book.year} 年刊（原著 ${book.origYear} 年）`
+    : `${book.year} 年刊`;
+
+  const descText = book.description && book.description.trim()
+    ? book.description
+    : "（後日記入）";
+  const impText = book.impression && book.impression.trim()
+    ? book.impression
+    : "（後日記入）";
+  const descClass = book.description && book.description.trim() ? "" : " is-empty";
+  const impClass = book.impression && book.impression.trim() ? "" : " is-empty";
+
+  const status = book.status || "read";
+  const stampClass = "stamp--" + status;
+  const stampText = { read: "読了", reading: "読書中", unread: "未読" }[status];
+
+  document.getElementById("detail-root").innerHTML = `
+    <div class="stamp ${stampClass}">${stampText}</div>
+
+    <div class="detail-header">
+      <h1 class="detail-title">${book.title}</h1>
+      ${book.subtitle ? `<p class="detail-subtitle">${book.subtitle}</p>` : ""}
+      <div class="detail-meta">
+        <span class="detail-meta__author">${book.author}</span>
+        <span class="detail-meta__year">${yearLine}</span>
+      </div>
+    </div>
+
+    <div class="detail-body">
+      <section class="detail-section">
+        <span class="detail-section__label">Link</span>
+        <a class="amazon-link" href="${book.amazon}" target="_blank" rel="noopener noreferrer">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6" />
+            <polyline points="15 3 21 3 21 9" />
+            <line x1="10" y1="14" x2="21" y2="3" />
+          </svg>
+          Amazonで見る
+        </a>
+      </section>
+
+      <section class="detail-section">
+        <span class="detail-section__label">内容</span>
+        <p class="detail-text${descClass}">${descText}</p>
+      </section>
+
+      <section class="detail-section">
+        <span class="detail-section__label">感想</span>
+        <p class="detail-text${impClass}">${impText}</p>
+      </section>
+    </div>
+  `;
+
+  const hasPrev = id > 0;
+  const hasNext = id < BOOKS.length - 1;
+  const prevBook = hasPrev ? BOOKS[id - 1] : null;
+  const nextBook = hasNext ? BOOKS[id + 1] : null;
+
+  document.getElementById("pager").innerHTML = `
+    <a class="pager__link pager__link--prev ${hasPrev ? "" : "pager__link--disabled"}"
+       href="${hasPrev ? `book.html?id=${id - 1}` : "#"}">
+      &larr; 前へ
+    </a>
+    <a class="pager__home" href="index.html">一覧</a>
+    <a class="pager__link pager__link--next ${hasNext ? "" : "pager__link--disabled"}"
+       href="${hasNext ? `book.html?id=${id + 1}` : "#"}">
+      次へ &rarr;
+    </a>
+  `;
+</script>
+</body>
+</html>
