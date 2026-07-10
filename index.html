@@ -46,10 +46,9 @@
 
     li.innerHTML = `
       <a href="book.html?id=${i}">
-        <span class="book-row__num">${num}</span>
         <span class="book-row__text">
           <span class="book-row__title">${book.title}</span>
-          ${book.subtitle ? `<span class="book-row__subtitle">${book.subtitle}</span>` : ""}
+          <span class="book-row__subtitle">${book.subtitle || "&nbsp;"}</span>
           <span class="book-row__author">${book.author}</span>
         </span>
         <span class="book-row__year">
