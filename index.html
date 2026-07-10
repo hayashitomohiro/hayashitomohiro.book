@@ -13,7 +13,7 @@
     <span class="site-header__eyebrow">Reading Log</span>
     <h1 class="site-title">読書の記録</h1>
     <div class="site-meta">
-      <span>作成：林朋紘</span>
+      <span>林朋紘</span>
       <span class="site-meta__count" id="book-count"></span>
     </div>
   </header>
@@ -49,7 +49,7 @@
         <span class="book-row__num">${num}</span>
         <span class="book-row__text">
           <span class="book-row__title">${book.title}</span>
-          ${book.subtitle ? `<span class="book-row__subtitle">${book.subtitle}</span>` : ""}
+          <span class="book-row__subtitle">${book.subtitle || "&nbsp;"}</span>
           <span class="book-row__author">${book.author}</span>
         </span>
         <span class="book-row__year">
