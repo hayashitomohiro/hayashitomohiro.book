@@ -83,6 +83,14 @@ a {
   padding: 72px 28px 120px;
 }
 
+.page-stamp {
+    width: 100px;
+    height: 100px;
+    top: 2px;
+    left: 4px;
+    transform: rotate(-10deg);
+  }
+
 /* ---------- header ---------- */
 
 .site-header {
@@ -470,9 +478,17 @@ a {
   .pager__home {
     filter: none;
   }
-  
+
   .wrap {
     padding: 48px 20px 100px;
+  }
+
+  .page-stamp {
+    width: 38px;
+    height: 38px;
+    top: 2px;
+    left: 4px;
+    transform: rotate(-10deg);
   }
 
   .site-title {
