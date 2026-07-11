@@ -4,7 +4,7 @@
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <link rel="icon" type="image/svg+xml" href="favicon.svg" />
-<title>読書の記録</title>
+<title>林林書林</title>
 <link rel="stylesheet" href="style.css" />
 </head>
 <body>
@@ -18,20 +18,30 @@
     <feTurbulence type="fractalNoise" baseFrequency="0.75" numOctaves="2" seed="5" result="noise"/>
     <feDisplacementMap in="SourceGraphic" in2="noise" scale="0.7" xChannelSelector="R" yChannelSelector="G"/>
   </filter>
+  <filter id="logo-bleed" x="-20%" y="-20%" width="140%" height="140%">
+    <feTurbulence type="fractalNoise" baseFrequency="0.6" numOctaves="2" seed="12" result="noise"/>
+    <feDisplacementMap in="SourceGraphic" in2="noise" scale="0.9" xChannelSelector="R" yChannelSelector="G"/>
+  </filter>
 </svg>
 
 <div class="wrap">
 
-  <img src="icon.svg" alt="" class="page-stamp" />
-
   <header class="site-header">
     <span class="site-header__eyebrow">Reading Log</span>
-    <h1 class="site-title">読書の記録</h1>
+    <h1 class="site-title">
+      <img class="site-logo" src="logo.svg" alt="林林書林">
+    </h1>
     <div class="site-meta">
       <span>林朋紘</span>
       <span class="site-meta__count" id="book-count"></span>
     </div>
   </header>
+
+  <ul class="status-legend" aria-label="読書状況の凡例">
+    <li><span class="status-dot status-dot--read"></span>読了</li>
+    <li><span class="status-dot status-dot--reading"></span>読書中</li>
+    <li><span class="status-dot status-dot--unread"></span>未読</li>
+  </ul>
 
   <ul class="book-list" id="book-list"></ul>
 
@@ -66,7 +76,7 @@
         <span class="book-row__subtitle">${book.subtitle || "&nbsp;"}</span>
         <span class="book-row__author">${book.author}</span>
         <span class="book-row__year">
-          <span class="status-dot ${dotClass}" title="${dotTitle}"></span>
+          <span class="status-dot ${dotClass}" title="${dotTitle}" aria-label="${dotTitle}"></span>
           ${yearText}
         </span>
         ${book.publisher ? `<span class="book-row__publisher">${book.publisher}</span>` : ""}

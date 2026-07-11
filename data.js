@@ -156,7 +156,7 @@ const BOOKS = [
     status: "reading"
   },
   {
-    title: "超解読！はじめてのカント『純粋理性批判』",
+    title: "超解読！はじめてのカント\n『純粋理性批判』",
     subtitle: "",
     author: "竹田青嗣",
     year: 2011,
@@ -367,7 +367,7 @@ const BOOKS = [
     year: 2005,
     origYear: 1990,
     publisher: "以文社",
-    amazon: "hhttps://amzn.asia/d/07SOjuEk",
+    amazon: "https://amzn.asia/d/07SOjuEk",
     description: "",
     impression: "",
     status: "unread"
