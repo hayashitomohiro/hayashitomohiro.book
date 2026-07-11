@@ -1,7 +1,7 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
   <defs>
-    <clipPath id="roundClip">
-      <rect width="64" height="64" rx="12"/>
+    <clipPath id="circleClip">
+      <circle cx="32" cy="32" r="31"/>
     </clipPath>
 
     <filter id="bleed" x="-30%" y="-30%" width="160%" height="160%">
@@ -19,9 +19,8 @@
     </filter>
   </defs>
 
-  <rect width="64" height="64" rx="12" fill="#efeae1"/>
-
-  <g clip-path="url(#roundClip)">
+  <g clip-path="url(#circleClip)">
+    <circle cx="32" cy="32" r="31" fill="#efeae1"/>
     <rect width="64" height="64" filter="url(#grain)" opacity="0.06"/>
   </g>
 
