@@ -1,3 +1,9 @@
+/* ==========================================================
+   読書の記録 ― stylesheet
+   静謐（quiet stillness）を基調に、蔵書印を思わせる朱の一点を
+   差し色として用いる。
+   ========================================================== */
+
 :root {
   --paper: #efeae1;
   --paper-card: #f6f2e9;
@@ -35,6 +41,7 @@ body {
   -webkit-font-smoothing: antialiased;
 }
 
+/* subtle ruled-paper texture in the background */
 body::before {
   content: "";
   position: fixed;
@@ -116,8 +123,12 @@ a {
 .book-row a {
   display: grid;
   grid-template-columns: 44px 1fr auto;
-  align-items: baseline;
-  gap: 18px;
+  grid-template-areas:
+    "num title     year"
+    "num subtitle  ."
+    "num author    publisher";
+  column-gap: 18px;
+  row-gap: 6px;
   padding: 22px 6px;
   transition: background-color 0.25s ease, padding-left 0.25s ease;
 }
@@ -134,55 +145,66 @@ a {
 }
 
 .book-row__num {
+  grid-area: num;
   font-size: 12px;
   color: var(--ink-faint);
   font-variant-numeric: tabular-nums;
   letter-spacing: 0.04em;
-}
-
-.book-row__text {
-  min-width: 0;
+  padding-top: 2px;
 }
 
 .book-row__title {
+  grid-area: title;
   font-size: 16px;
   font-weight: 600;
   color: var(--ink);
-  margin: 0 0 6px;
   overflow-wrap: break-word;
+  align-self: end;
 }
 
 .book-row__subtitle {
+  grid-area: subtitle;
   display: block;
   font-size: 12.5px;
   color: var(--ink-soft);
   font-weight: 400;
-  margin-top: 2px;
 }
 
 .book-row__author {
+  grid-area: author;
   font-size: 12.5px;
   color: var(--ink-soft);
+  align-self: start;
 }
 
 .book-row__year {
+  grid-area: year;
+  justify-self: end;
+  align-self: end;
   display: flex;
-  align-items: baseline;
+  align-items: center;
   gap: 8px;
   font-size: 12px;
   color: var(--ink-faint);
   white-space: nowrap;
-  text-align: right;
   font-variant-numeric: tabular-nums;
+}
+
+.book-row__publisher {
+  grid-area: publisher;
+  justify-self: end;
   align-self: start;
-  padding-top: 2px;
+  font-size: 12px;
+  color: var(--ink-faint);
+  white-space: nowrap;
 }
 
 .status-dot {
-  width: 7px;
-  height: 7px;
+  width: 8px;
+  height: 8px;
   border-radius: 50%;
   flex-shrink: 0;
+  display: inline-block;
 }
 
 .status-dot--read {
@@ -300,6 +322,10 @@ a {
   color: var(--ink-soft);
 }
 
+.detail-meta__publisher {
+  color: var(--ink-soft);
+}
+
 .detail-body {
   margin-top: 8px;
 }
@@ -330,7 +356,7 @@ a {
   font-weight: 600;
   color: var(--accent);
   border-bottom: 1px solid var(--accent-soft);
-  padding-bottom: 0px;
+  padding-bottom: 3px;
   transition: border-color 0.2s ease, color 0.2s ease;
 }
 
@@ -364,6 +390,7 @@ a {
   align-items: center;
   margin-top: 56px;
   padding-top: 28px;
+  border-top: 1px solid var(--line);
   font-size: 12.5px;
   letter-spacing: 0.06em;
 }
@@ -415,13 +442,25 @@ a {
 
   .book-row a {
     grid-template-columns: 32px 1fr;
-    gap: 12px;
+    grid-template-areas:
+      "num title"
+      "num subtitle"
+      "num author"
+      "num year"
+      "num publisher";
+    column-gap: 12px;
+    row-gap: 4px;
   }
 
   .book-row__year {
-    grid-column: 2 / 3;
-    text-align: left;
-    padding-top: 4px;
+    justify-self: start;
+    align-self: start;
+    margin-top: 4px;
+  }
+
+  .book-row__publisher {
+    justify-self: start;
+    align-self: start;
   }
 
   .detail-title {

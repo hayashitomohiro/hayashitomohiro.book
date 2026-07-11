@@ -5,7 +5,8 @@ const BOOKS = [
     author: "柳沢英輔",
     year: 2022,
     origYear: null,
-    amazon: "https://www.amazon.co.jp/s?k=フィールド・レコーディング入門+柳沢英輔",
+    publisher: "フィルムアート社",
+    amazon: "https://amzn.asia/d/00Kk20SX",
     description: "",
     impression: "",
     status: "read"
@@ -16,7 +17,8 @@ const BOOKS = [
     author: "ロラン・バルト，花輪光（訳）",
     year: 1997,
     origYear: 1980,
-    amazon: "https://www.amazon.co.jp/s?k=明るい部屋+ロラン・バルト",
+    publisher: "みすず書房",
+    amazon: "https://amzn.asia/d/0aTKSOSn",
     description: "",
     impression: "",
     status: "read"
@@ -27,7 +29,8 @@ const BOOKS = [
     author: "谷口文和，中川克志，福間裕大",
     year: 2015,
     origYear: null,
-    amazon: "https://www.amazon.co.jp/s?k=音響メディア史",
+    publisher: "ナカニシヤ出版",
+    amazon: "https://amzn.asia/d/0cENey1k",
     description: "",
     impression: "",
     status: "read"
@@ -38,7 +41,8 @@ const BOOKS = [
     author: "竹田青嗣",
     year: 1989,
     origYear: null,
-    amazon: "https://www.amazon.co.jp/s?k=現象学入門+竹田青嗣",
+    publisher: "NHK出版",
+    amazon: "https://amzn.asia/d/08JlFQBS",
     description: "",
     impression: "",
     status: "read"
@@ -49,7 +53,8 @@ const BOOKS = [
     author: "毛利嘉孝（監）",
     year: 2017,
     origYear: null,
-    amazon: "https://www.amazon.co.jp/s?k=アフターミュージッキング+毛利嘉孝",
+    publisher: "東京藝術大学出版会",
+    amazon: "https://amzn.asia/d/03viugBX",
     description: "",
     impression: "",
     status: "reading"
@@ -60,7 +65,8 @@ const BOOKS = [
     author: "門林岳史，増田展大（編著）",
     year: 2021,
     origYear: null,
-    amazon: "https://www.amazon.co.jp/s?k=クリティカル・ワード+メディア論",
+    publisher: "フィルムアート社",
+    amazon: "https://amzn.asia/d/0dx1GfWS",
     description: "",
     impression: "",
     status: "reading"
@@ -71,7 +77,8 @@ const BOOKS = [
     author: "竹田青嗣",
     year: 2011,
     origYear: null,
-    amazon: "https://www.amazon.co.jp/s?k=超解読！はじめてのカント+純粋理性批判",
+    publisher: "講談社現代新書",
+    amazon: "https://amzn.asia/d/0hrZkNrE",
     description: "",
     impression: "",
     status: "reading"
@@ -82,7 +89,8 @@ const BOOKS = [
     author: "村山達也",
     year: 2025,
     origYear: null,
-    amazon: "https://www.amazon.co.jp/s?k=ベルクソン入門+村山達也",
+    publisher: "青土社",
+    amazon: "https://amzn.asia/d/01Xclzfq",
     description: "",
     impression: "",
     status: "unread"
@@ -93,7 +101,8 @@ const BOOKS = [
     author: "モーリス・メルロ＝ポンティ，中島盛夫（訳）",
     year: 2015,
     origYear: 1945,
-    amazon: "https://www.amazon.co.jp/s?k=知覚の現象学+メルロ＝ポンティ",
+    publisher: "法政大学出版局",
+    amazon: "https://amzn.asia/d/03wcj5YV",
     description: "",
     impression: "",
     status: "unread"
@@ -104,7 +113,8 @@ const BOOKS = [
     author: "福尾匠",
     year: 2024,
     origYear: null,
-    amazon: "https://www.amazon.co.jp/s?k=眼がスクリーンになるとき+福尾匠",
+    publisher: "河出文庫",
+    amazon: "https://amzn.asia/d/0adeQ19J",
     description: "",
     impression: "",
     status: "unread"
@@ -115,7 +125,8 @@ const BOOKS = [
     author: "ドン・アイディ，稲垣諭ほか（訳）",
     year: 2025,
     origYear: 2009,
-    amazon: "https://www.amazon.co.jp/s?k=技術哲学入門+ドン・アイディ",
+    publisher: "晶文社",
+    amazon: "https://amzn.asia/d/0dddbR1g",
     description: "",
     impression: "",
     status: "unread"
@@ -126,7 +137,8 @@ const BOOKS = [
     author: "ヴィレム・フルッサー，瀧本雅志（訳）",
     year: 2009,
     origYear: 1993,
-    amazon: "https://www.amazon.co.jp/s?k=小さなデザインの哲学+フルッサー",
+    publisher: "鹿島出版会",
+    amazon: "https://amzn.asia/d/0abOtDzd",
     description: "",
     impression: "",
     status: "reading"
@@ -137,7 +149,8 @@ const BOOKS = [
     author: "ヴィレム・フルッサー，深川雅文（訳）",
     year: 1999,
     origYear: 1983,
-    amazon: "https://www.amazon.co.jp/s?k=写真の哲学のために+フルッサー",
+    publisher: "勁草書房",
+    amazon: "https://amzn.asia/d/022sq9zg",
     description: "",
     impression: "",
     status: "reading"
@@ -148,7 +161,8 @@ const BOOKS = [
     author: "スーザン・ソンタグ，近藤耕人（訳）",
     year: 2026,
     origYear: 1977,
-    amazon: "https://www.amazon.co.jp/s?k=写真論+スーザン・ソンタグ",
+    publisher: "晶文社",
+    amazon: "https://amzn.asia/d/01IcZIJW",
     description: "",
     impression: "",
     status: "reading"
@@ -159,7 +173,8 @@ const BOOKS = [
     author: "ジェフリー・バッチェン，前川修ほか（訳）",
     year: 2010,
     origYear: 1997,
-    amazon: "https://www.amazon.co.jp/s?k=写真のアルケオロジー+バッチェン",
+    publisher: "青弓社",
+    amazon: "https://amzn.asia/d/03mdo5wJ",
     description: "",
     impression: "",
     status: "unread"
@@ -170,7 +185,8 @@ const BOOKS = [
     author: "レイモンド・マリー・シェーファー，鳥越けい子ほか（訳）",
     year: 2006,
     origYear: 1977,
-    amazon: "https://www.amazon.co.jp/s?k=世界の調律+シェーファー",
+    publisher: "平凡社",
+    amazon: "https://amzn.asia/d/04EYqQGn",
     description: "",
     impression: "",
     status: "reading"
@@ -181,7 +197,8 @@ const BOOKS = [
     author: "ジョナサン・スターン，中川克志ほか（訳）",
     year: 2015,
     origYear: 2003,
-    amazon: "https://www.amazon.co.jp/s?k=聞こえくる過去+ジョナサン・スターン",
+    publisher: "インスクリプト",
+    amazon: "https://amzn.asia/d/0gvYJNd6",
     description: "",
     impression: "",
     status: "reading"
@@ -192,7 +209,8 @@ const BOOKS = [
     author: "ローズリー・ゴールドバーグ，深川雅文（監訳）",
     year: 2026,
     origYear: 1979,
-    amazon: "https://www.amazon.co.jp/s?k=パフォーマンス・アート+ゴールドバーグ",
+    publisher: "フィルムアート社",
+    amazon: "https://amzn.asia/d/0gaeeibO",
     description: "",
     impression: "",
     status: "unread"
@@ -203,7 +221,8 @@ const BOOKS = [
     author: "ジェニ・ゴチョーク，杉本拓ほか（訳）",
     year: 2026,
     origYear: 2016,
-    amazon: "https://www.amazon.co.jp/s?k=実験音楽+ゴチョーク",
+    publisher: "フィルムアート社",
+    amazon: "https://amzn.asia/d/0aMglDff",
     description: "",
     impression: "",
     status: "unread"
@@ -214,7 +233,8 @@ const BOOKS = [
     author: "アンリ・ルフェーブル，森本和夫（訳）",
     year: 2026,
     origYear: 1968,
-    amazon: "https://www.amazon.co.jp/s?k=現代世界における日常生活+ルフェーブル",
+    publisher: "筑摩書房",
+    amazon: "https://amzn.asia/d/04Wzct3e",
     description: "",
     impression: "",
     status: "unread"
@@ -225,18 +245,20 @@ const BOOKS = [
     author: "ヴァルター・ベンヤミン，佐々木基一（訳）",
     year: 1999,
     origYear: 1936,
-    amazon: "https://www.amazon.co.jp/s?k=複製技術時代の芸術+ベンヤミン",
+    publisher: "晶文社",
+    amazon: "https://amzn.asia/d/01jiAVet",
     description: "",
     impression: "",
     status: "unread"
   },
   {
     title: "現代写真論",
-    subtitle: "",
+    subtitle: "コンテンポラリーアートとしての写真のゆくえ",
     author: "シャーロット・コットン，大橋悦子ほか（訳）",
     year: 2010,
     origYear: 2004,
-    amazon: "https://www.amazon.co.jp/s?k=現代写真論+シャーロット・コットン",
+    publisher: "晶文社",
+    amazon: "https://amzn.asia/d/00v675zC",
     description: "",
     impression: "",
     status: "reading"
@@ -247,7 +269,8 @@ const BOOKS = [
     author: "ジョナサン・クレーリー，遠藤知巳（訳）",
     year: 2005,
     origYear: 1990,
-    amazon: "https://www.amazon.co.jp/s?k=観察者の系譜+ジョナサン・クレーリー",
+    publisher: "以文社",
+    amazon: "hhttps://amzn.asia/d/07SOjuEk",
     description: "",
     impression: "",
     status: "unread"
@@ -258,7 +281,8 @@ const BOOKS = [
     author: "ジェームズ・ブライドル，岩崎晋也（訳）",
     year: 2024,
     origYear: 2022,
-    amazon: "https://www.amazon.co.jp/s?k=WAYS+OF+BEING+ジェームズ・ブライドル",
+    publisher: "早川書房",
+    amazon: "https://amzn.asia/d/019Fbei0",
     description: "",
     impression: "",
     status: "unread"
