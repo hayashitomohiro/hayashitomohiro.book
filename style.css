@@ -446,6 +446,31 @@ a {
 /* ---------- responsive ---------- */
 
 @media (max-width: 560px) {
+  /* the ink-bleed filter looks blocky on small text at mobile sizes,
+     so it's switched off below this width (the stamp keeps its own
+     filter since its size doesn't change) */
+  .site-header__eyebrow,
+  .site-title,
+  .site-meta,
+  .book-row__num,
+  .book-row__title,
+  .book-row__subtitle,
+  .book-row__author,
+  .book-row__year,
+  .book-row__publisher,
+  .site-footer,
+  .back-link,
+  .detail-title,
+  .detail-subtitle,
+  .detail-meta,
+  .detail-section__label,
+  .amazon-link,
+  .detail-text,
+  .pager__link,
+  .pager__home {
+    filter: none;
+  }
+  
   .wrap {
     padding: 48px 20px 100px;
   }
