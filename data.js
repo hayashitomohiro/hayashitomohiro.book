@@ -72,6 +72,18 @@ const BOOKS = [
     status: "read"
   },
   {
+    title: "インスタグラムと視覚文化論",
+    subtitle: "レフ・マノヴィッチのカルチュラル・アナリティクスをめぐって",
+    author: "レフ・マノヴィッチ，久保田晃弘，きりとりめでる（編訳）ほか",
+    year: 2018,
+    origYear: 2017,
+    publisher: "ビー・エヌ・エヌ新社",
+    amazon: "https://amzn.asia/d/0eZTkz6O",
+    description: "",
+    impression: "",
+    status: "read"
+  },
+  {
     title: "フィールド・レコーディング入門",
     subtitle: "響きのなかで世界と出会う",
     author: "柳沢英輔",
@@ -122,7 +134,7 @@ const BOOKS = [
   {
     title: "アフターミュージッキング",
     subtitle: "実践する音楽",
-    author: "毛利嘉孝（監）",
+    author: "毛利嘉孝（監）ほか",
     year: 2017,
     origYear: null,
     publisher: "東京藝術大学出版会",
@@ -289,6 +301,18 @@ const BOOKS = [
   },
   {
     title: "実験音楽",
+    subtitle: "ケージとその後",
+    author: "マイケル・ナイマン，椎名亮輔（訳）",
+    year: 1992,
+    origYear: 1974,
+    publisher: "水声社",
+    amazon: "https://amzn.asia/d/0f5kI2Ow",
+    description: "",
+    impression: "",
+    status: "unread"
+  },
+  {
+    title: "実験音楽",
     subtitle: "1970年から現代まで",
     author: "ジェニ・ゴチョーク，杉本拓ほか（訳）",
     year: 2026,
@@ -299,6 +323,7 @@ const BOOKS = [
     impression: "",
     status: "unread"
   },
+
   {
     title: "現代世界における日常生活",
     subtitle: "",
