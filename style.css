@@ -473,18 +473,6 @@ a {
   .detail-meta {
     font-size: 12px;
   }
-
-  .pager {
-    grid-template-columns: 1fr;
-    gap: 14px;
-    text-align: center;
-  }
-
-  .pager__link--prev,
-  .pager__link--next,
-  .pager__home {
-    justify-self: center;
-  }
 }
 
 /* respect reduced motion */
