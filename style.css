@@ -35,19 +35,39 @@ body {
   -webkit-font-smoothing: antialiased;
 }
 
-/* subtle ruled-paper texture in the background */
-body::before {
+/* apply the ink-bleed effect to all text on the site */
+.site-header__eyebrow,
+.site-title,
+.site-meta,
+.book-row__num,
+.book-row__title,
+.book-row__subtitle,
+.book-row__author,
+.book-row__year,
+.book-row__publisher,
+.site-footer,
+.back-link,
+.detail-title,
+.detail-subtitle,
+.detail-meta,
+.detail-section__label,
+.amazon-link,
+.detail-text,
+.pager__link,
+.pager__home {
+  filter: url(#text-bleed);
+}
+
+body::after {
   content: "";
   position: fixed;
   inset: 0;
   pointer-events: none;
   z-index: 0;
-  background-image: repeating-linear-gradient(
-    to bottom,
-    transparent 0,
-    transparent 39px,
-    rgba(38, 36, 31, 0.028) 40px
-  );
+  mix-blend-mode: multiply;
+  opacity: 0.3;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='320' height='320'%3E%3Cfilter id='p'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.035' numOctaves='5' seed='7' stitchTiles='stitch' result='n'/%3E%3CfeDiffuseLighting in='n' lighting-color='white' surfaceScale='1.5' diffuseConstant='1.1' result='l'%3E%3CfeDistantLight azimuth='235' elevation='55'/%3E%3C/feDiffuseLighting%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23p)'/%3E%3C/svg%3E");
+  background-size: 320px 320px;
 }
 
 a {
@@ -254,6 +274,7 @@ a {
   margin-bottom: 22px;
   text-align: center;
   line-height: 1.2;
+  filter: url(#stamp-bleed);
 }
 
 .stamp--read {

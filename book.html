@@ -8,6 +8,18 @@
 <link rel="stylesheet" href="style.css" />
 </head>
 <body>
+
+<svg width="0" height="0" style="position:absolute; overflow:hidden;">
+  <filter id="stamp-bleed" x="-30%" y="-30%" width="160%" height="160%">
+    <feTurbulence type="fractalNoise" baseFrequency="0.9" numOctaves="2" seed="7" result="noise"/>
+    <feDisplacementMap in="SourceGraphic" in2="noise" scale="0.7" xChannelSelector="R" yChannelSelector="G"/>
+  </filter>
+  <filter id="text-bleed" x="-20%" y="-20%" width="140%" height="140%">
+    <feTurbulence type="fractalNoise" baseFrequency="0.75" numOctaves="2" seed="5" result="noise"/>
+    <feDisplacementMap in="SourceGraphic" in2="noise" scale="1.0" xChannelSelector="R" yChannelSelector="G"/>
+  </filter>
+</svg>
+
 <div class="wrap">
 
   <a href="index.html" class="back-link">&larr; 一覧に戻る</a>
@@ -60,6 +72,7 @@
 
     <div class="detail-body">
       <section class="detail-section">
+        <span class="detail-section__label">Link</span>
         <a class="amazon-link" href="${book.amazon}" target="_blank" rel="noopener noreferrer">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
             <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6" />
