@@ -1,5 +1,77 @@
 const BOOKS = [
   {
+    title: "日本写真史（上）",
+    subtitle: "幕末維新から高度成長期まで",
+    author: "鳥原学",
+    year: 2013,
+    origYear: null,
+    publisher: "中央公論新社",
+    amazon: "https://amzn.asia/d/0gB8ZizV",
+    description: "",
+    impression: "",
+    status: "read"
+  },
+  {
+    title: "日本写真史（下）",
+    subtitle: "安定成長期から3・11後まで",
+    author: "鳥原学",
+    year: 2013,
+    origYear: null,
+    publisher: "中央公論新社",
+    amazon: "https://amzn.asia/d/0bDtpS3J",
+    description: "",
+    impression: "",
+    status: "read"
+  },
+  {
+    title: "西洋音楽史",
+    subtitle: "「クラシック」の黄昏",
+    author: "岡田暁生",
+    year: 2005,
+    origYear: null,
+    publisher: "中央公論新社",
+    amazon: "https://amzn.asia/d/0bDtpS3J",
+    description: "",
+    impression: "",
+    status: "read"
+  },
+  {
+    title: "現代音楽史",
+    subtitle: "闘争しつづける芸術のゆくえ",
+    author: "沼野雄司",
+    year: 2021,
+    origYear: null,
+    publisher: "中央公論新社",
+    amazon: "https://amzn.asia/d/0ehLtLd2",
+    description: "",
+    impression: "",
+    status: "read"
+  },
+  {
+    title: "現代美術史",
+    subtitle: "欧米、日本、トランスナショナル",
+    author: "山本浩貴",
+    year: 2019,
+    origYear: null,
+    publisher: "中央公論新社",
+    amazon: "https://amzn.asia/d/09YGm8kZ",
+    description: "",
+    impression: "",
+    status: "read"
+  },
+  {
+    title: "現代思想入門",
+    subtitle: "",
+    author: "千葉雅也",
+    year: 2022,
+    origYear: null,
+    publisher: "講談社",
+    amazon: "https://amzn.asia/d/06bvA7fe",
+    description: "",
+    impression: "",
+    status: "read"
+  },
+  {
     title: "フィールド・レコーディング入門",
     subtitle: "響きのなかで世界と出会う",
     author: "柳沢英輔",
