@@ -144,7 +144,7 @@ const BOOKS = [
     status: "reading"
   },
   {
-    title: "クリティカル・ワード　メディア論",
+    title: "クリティカル・ワード\n メディア論",
     subtitle: "",
     author: "門林岳史，増田展大（編著）",
     year: 2021,

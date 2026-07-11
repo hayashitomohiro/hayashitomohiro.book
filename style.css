@@ -14,12 +14,26 @@
 
 @font-face {
   font-family: "CompositeMincho";
+  font-weight: 400;
   src: local("Times New Roman"), local("Times");
   unicode-range: U+0000-024F, U+2000-206F, U+2070-209F, U+20A0-20CF;
 }
 @font-face {
   font-family: "CompositeMincho";
+  font-weight: 500;
+  src: local("Times New Roman Bold"), local("Times New Roman"), local("Times");
+  unicode-range: U+0000-024F, U+2000-206F, U+2070-209F, U+20A0-20CF;
+}
+@font-face {
+  font-family: "CompositeMincho";
+  font-weight: 400;
   src: local("游明朝"), local("Yu Mincho"), local("YuMincho"), local("Hiragino Mincho ProN");
+  unicode-range: U+3000-30FF, U+3400-4DBF, U+4E00-9FFF, U+F900-FAFF, U+FF00-FFEF;
+}
+@font-face {
+  font-family: "CompositeMincho";
+  font-weight: 700;
+  src: local("游明朝 Demibold"), local("Yu Mincho Demibold"), local("游明朝"), local("Yu Mincho"), local("YuMincho"), local("Hiragino Mincho ProN");
   unicode-range: U+3000-30FF, U+3400-4DBF, U+4E00-9FFF, U+F900-FAFF, U+FF00-FFEF;
 }
 
