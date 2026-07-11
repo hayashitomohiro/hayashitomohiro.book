@@ -383,5 +383,53 @@ const BOOKS = [
     description: "",
     impression: "",
     status: "unread"
+  },
+  {
+    title: "Vtuber学",
+    subtitle: "",
+    author: "岡本健，山野弘樹，吉川慧",
+    year: 2024,
+    origYear: null,
+    publisher: "岩波新書",
+    amazon: "https://amzn.asia/d/0e0M9LFO",
+    description: "",
+    impression: "",
+    status: "unread"
+  },
+  {
+    title: "現象学は〈思考の原理〉である",
+    subtitle: "",
+    author: "竹田青嗣",
+    year: 2004,
+    origYear: null,
+    publisher: "筑摩書房",
+    amazon: "https://amzn.asia/d/052RpUVV",
+    description: "",
+    impression: "",
+    status: "unread"
+  },
+  {
+    title: "キュレーションの時代",
+    subtitle: "「つながり」の情報革命がはじまる",
+    author: "佐々木俊尚",
+    year: 2011,
+    origYear: null,
+    publisher: "筑摩書房",
+    amazon: "https://amzn.asia/d/0d9cY2Sa",
+    description: "",
+    impression: "",
+    status: "unread"
+  },
+  {
+    title: "現象学",
+    subtitle: "",
+    author: "木田元",
+    year: 1970,
+    origYear: null,
+    publisher: "岩波書店",
+    amazon: "https://amzn.asia/d/00b30kHV",
+    description: "",
+    impression: "",
+    status: "unread"
   }
 ];
