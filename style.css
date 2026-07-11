@@ -84,12 +84,29 @@ a {
 }
 
 .page-stamp {
+  position: absolute;
+  top: 2px;
+  left: 4px;
+  width: 100px;
+  height: 100px;
+  transform: rotate(-10deg);
+  opacity: 0.92;
+  pointer-events: none;
+  z-index: 2;
+}
+
+/* on wide windows there's real empty margin beside the content column,
+   so the stamp moves out there instead of sitting above the header */
+@media (min-width: 1000px) {
+  .page-stamp {
+    position: fixed;
+    top: 110px;
+    left: 40px;
     width: 100px;
     height: 100px;
-    top: 2px;
-    left: 4px;
-    transform: rotate(-10deg);
+    transform: rotate(-13deg);
   }
+}
 
 /* ---------- header ---------- */
 
@@ -413,6 +430,7 @@ a {
   align-items: center;
   margin-top: 56px;
   padding-top: 28px;
+  border-top: 1px solid var(--line);
   font-size: 12.5px;
   letter-spacing: 0.06em;
 }
