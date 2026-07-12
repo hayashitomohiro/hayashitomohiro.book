@@ -51,11 +51,22 @@
   const descText = book.description && book.description.trim()
     ? book.description
     : "（後日記入）";
-  const impText = book.impression && book.impression.trim()
-    ? book.impression
-    : "（後日記入）";
   const descClass = book.description && book.description.trim() ? "" : " is-empty";
-  const impClass = book.impression && book.impression.trim() ? "" : " is-empty";
+
+  // 感想は日付付きで増やしていける配列方式。
+  // book.impressions = [{ date: "26.7.12", text: "..." }, ...] を data.js に足すたびに1件ずつ増える。
+  const impressions = book.impressions || [];
+  let impressionsHtml = "";
+  if (impressions.length) {
+    impressionsHtml = impressions.map(entry => `
+      <div class="detail-text-wrap">
+        <p class="detail-text">${entry.text}</p>
+        ${entry.date ? `<p class="detail-date">（${entry.date}）</p>` : ""}
+      </div>
+    `).join("");
+  } else {
+    impressionsHtml = `<p class="detail-text is-empty">（後日記入）</p>`;
+  }
 
   const status = book.status || "read";
   const stampClass = "stamp--" + status;
@@ -119,9 +130,8 @@
 
       <section class="detail-section">
         <span class="detail-section__label">感想</span>
-        <div class="detail-text-wrap">
-          <p class="detail-text${impClass}">${impText}</p>
-          ${book.impression && book.impression.trim() && book.impressionDate ? `<p class="detail-date">（${book.impressionDate}）</p>` : ""}
+        <div class="detail-impressions">
+          ${impressionsHtml}
         </div>
       </section>
     </div>
