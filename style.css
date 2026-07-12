@@ -396,6 +396,7 @@ a { color: inherit; text-decoration: none; }
 .amazon-link:hover { color: var(--stamp); border-color: var(--stamp); }
 .amazon-link svg { width: 13px; height: 13px; }
 .detail-text { margin: 0; font-size: 14px; line-height: 2.05; white-space: pre-wrap; text-align: justify;}
+.detail-text a {text-decoration: underline; text-underline-offset: 2px; text-decoration-thickness: 0.5px}
 .detail-text.is-empty { color: var(--ink-faint); font-size: 12px; }
 
 .detail-date {
