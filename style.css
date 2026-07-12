@@ -69,6 +69,7 @@ body {
 .detail-section__label,
 .amazon-link,
 .detail-text,
+.detail-date,
 .pager__link,
 .pager__home {
   filter: url(#text-bleed);
@@ -394,8 +395,26 @@ a { color: inherit; text-decoration: none; }
 .amazon-link { width: fit-content; display: inline-flex; align-items: center; gap: 9px; font-size: 13px; font-weight: 600; color: var(--accent); border-bottom: 1px solid var(--accent-soft); padding-bottom: 2px; transition: color .15s ease, border-color .15s ease; }
 .amazon-link:hover { color: var(--stamp); border-color: var(--stamp); }
 .amazon-link svg { width: 13px; height: 13px; }
-.detail-text { margin: 0; font-size: 14px; line-height: 2.05; white-space: pre-wrap; text-align: justify;}
+.detail-text { margin: 0; font-size: 14px; line-height: 2.05; white-space: pre-wrap; text-align: justify; }
+.detail-text a {
+  text-decoration: underline;
+  text-underline-offset: 2px;
+  text-decoration-thickness: 0.5px;
+}
+.detail-text a:hover {
+  color: var(--stamp);
+}
 .detail-text.is-empty { color: var(--ink-faint); font-size: 12px; }
+
+.detail-date {
+  margin: 6px 0 0;
+  text-align: right;
+  font-family: var(--serif-display);
+  font-size: 12px;
+  letter-spacing: .06em;
+  color: var(--ink-faint);
+  font-variant-numeric: tabular-nums;
+}
 
 .return-card {
   position: relative;
@@ -491,8 +510,8 @@ a { color: inherit; text-decoration: none; }
   position: absolute;
   top: 50%;
   left: 50%;
-  width: 40px;
-  height: 40px;
+  width: 30px;
+  height: 30px;
   margin: -15px 0 0 -15px;
   background-image: url("stamp.svg");
   background-size: contain;
@@ -549,6 +568,7 @@ a { color: inherit; text-decoration: none; }
   .detail-section__label,
   .amazon-link,
   .detail-text,
+  .detail-date,
   .return-card__title,
   .return-card__value,
   .return-card__footer,
