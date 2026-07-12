@@ -415,7 +415,6 @@ a { color: inherit; text-decoration: none; }
   border-top: 1px dashed var(--line);
 }
 
-/* 図書館の返却期限カード風。読んだ日とページを記録する */
 .return-card {
   position: relative;
   isolation: isolate;
@@ -548,34 +547,6 @@ a { color: inherit; text-decoration: none; }
 .pager__label-title { display: block; max-width: 180px; margin-top: 4px; color: var(--ink-faint); font-family: var(--serif-display); font-size: 10px; line-height: 1.45; letter-spacing: .02em; }
 
 @media (max-width: 620px) {
-  .site-header__eyebrow,
-  .site-title,
-  .site-meta,
-  .book-row__num,
-  .book-row__title,
-  .book-row__subtitle,
-  .book-row__author,
-  .book-row__year,
-  .book-row__publisher,
-  .site-footer,
-  .back-link,
-  .catalog-card__label,
-  .catalog-card__author,
-  .catalog-card__title,
-  .catalog-card__subtitle,
-  .catalog-card__pub,
-  .catalog-card__reg,
-  .detail-section__label,
-  .amazon-link,
-  .detail-text,
-  .detail-date,
-  .return-card__title,
-  .return-card__value,
-  .return-card__footer,
-  .pager__link,
-  .pager__home {
-    filter: none;
-  }
   .wrap { width: min(100% - 32px, 720px); padding: 46px 0 84px; }
   .site-header { margin-bottom: 34px; }
   .site-title { font-size: 27px; margin-bottom: 16px; }
