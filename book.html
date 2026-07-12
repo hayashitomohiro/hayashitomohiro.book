@@ -63,6 +63,7 @@
   // A stable pseudo-random angle per book, like individually hand-stamped cards.
   const stampAngle = ((((id + 1) * 37) % 17) - 8) + "deg";
 
+  // 返却期限カード風の読書記録。book.log = [{date:"48.3.-6", page:"32"}, ...] を data.js に足すと埋まる。
   const READING_LOG_ROWS = 8;
   const log = book.log || [];
   let logRowsHtml = "";
@@ -72,8 +73,8 @@
       const logAngle = ((((id + 1) * 37 + (i + 1) * 53) % 21) - 10) + "deg";
       logRowsHtml += `
         <tr>
-          <td>${entry.date}</td>
-          <td>${entry.page || ""}</td>
+          <td><span class="return-card__value">${entry.date}</span></td>
+          <td><span class="return-card__value">${entry.page || ""}</span></td>
           <td class="return-card__stampcol"><span class="return-card__stamp" style="--stamp-angle: ${logAngle}"></span></td>
         </tr>`;
     } else {

@@ -442,16 +442,19 @@ a { color: inherit; text-decoration: none; }
 .return-card__table {
   width: 100%;
   border-collapse: collapse;
+  table-layout: fixed;
 }
 
 .return-card__table th,
 .return-card__table td {
+  position: relative;
   border: 1px solid var(--line);
   padding: 9px 10px;
   font-size: 12.5px;
   text-align: center;
+  vertical-align: middle;
   font-variant-numeric: tabular-nums;
-  height: 34px;
+  height: 44px;
 }
 
 .return-card__table th {
@@ -460,24 +463,38 @@ a { color: inherit; text-decoration: none; }
   letter-spacing: .1em;
   color: var(--ink-soft);
   background: rgba(43, 38, 32, .03);
-  filter: url(#text-bleed);
 }
 
-.return-card__table td:first-child,
-.return-card__table td:nth-child(2) {
+.return-card__value {
+  position: absolute;
+  inset: 9px 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   font-family: var(--serif-display);
   font-weight: 700;
   font-size: 13.5px;
   letter-spacing: .04em;
+  line-height: 1.3;
   filter: url(#text-bleed);
+}
+
+.return-card__table th:first-child,
+.return-card__table th:nth-child(2),
+.return-card__table td:first-child,
+.return-card__table td:nth-child(2) {
+  width: calc((100% - 56px) / 2);
 }
 
 .return-card__stampcol { width: 56px; }
 
 .return-card__stamp {
-  display: inline-block;
-  width: 30px;
-  height: 30px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 40px;
+  height: 40px;
+  margin: -15px 0 0 -15px;
   background-image: url("stamp.svg");
   background-size: contain;
   background-repeat: no-repeat;
@@ -534,8 +551,7 @@ a { color: inherit; text-decoration: none; }
   .amazon-link,
   .detail-text,
   .return-card__title,
-  .return-card__table td:first-child,
-  .return-card__table td:nth-child(2),
+  .return-card__value,
   .return-card__footer,
   .pager__link,
   .pager__home {
@@ -568,8 +584,13 @@ a { color: inherit; text-decoration: none; }
   .return-card__title { font-size: 13.5px; padding: 13px 14px; }
   .return-card__table th,
   .return-card__table td { padding: 7px 6px; font-size: 11.5px; }
+  .return-card__value { inset: 7px 6px; }
   .return-card__stampcol { width: 44px; }
-  .return-card__stamp { width: 24px; height: 24px; }
+  .return-card__table th:first-child,
+  .return-card__table th:nth-child(2),
+  .return-card__table td:first-child,
+  .return-card__table td:nth-child(2) { width: calc((100% - 44px) / 2); }
+  .return-card__stamp { width: 24px; height: 24px; margin: -12px 0 0 -12px; }
   .pager__label-title { display: none; }
 }
 
