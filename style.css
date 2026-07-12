@@ -580,7 +580,7 @@ a { color: inherit; text-decoration: none; }
   .return-card__table th:nth-child(2),
   .return-card__table td:first-child,
   .return-card__table td:nth-child(2) { width: calc((100% - 44px) / 2); }
-  .return-card__stamp { width: 24px; height: 24px; margin: -12px 0 0 -12px; }
+  .return-card__stamp { width: 38px; height: 38px; margin: -12px 0 0 -12px; }
   .pager__label-title { display: none; }
 }
 
