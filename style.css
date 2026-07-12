@@ -397,7 +397,6 @@ a { color: inherit; text-decoration: none; }
 .detail-text { margin: 0; font-size: 14px; line-height: 2.05; white-space: pre-wrap; text-align: justify;}
 .detail-text.is-empty { color: var(--ink-faint); font-size: 12px; }
 
-/* 図書館の返却期限カード風。読んだ日とページを記録する */
 .return-card {
   position: relative;
   isolation: isolate;
