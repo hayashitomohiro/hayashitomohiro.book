@@ -58,11 +58,11 @@
   const impressions = book.impressions || [];
   let impressionsHtml = "";
   if (impressions.length) {
-    impressionsHtml = impressions.map(entry => `
-      <div class="detail-text-wrap">
+    impressionsHtml = impressions.map((entry, i) => `
+      <details class="impression-entry"${i === impressions.length - 1 ? " open" : ""}>
+        <summary class="impression-entry__date">${entry.date || "（日付未記入）"}</summary>
         <p class="detail-text">${entry.text}</p>
-        ${entry.date ? `<p class="detail-date">（${entry.date}）</p>` : ""}
-      </div>
+      </details>
     `).join("");
   } else {
     impressionsHtml = `<p class="detail-text is-empty">（後日記入）</p>`;
@@ -128,7 +128,7 @@
         <p class="detail-text${descClass}">${descText}</p>
       </section>
 
-      <section class="detail-section">
+      <section class="detail-section detail-section--impressions">
         <span class="detail-section__label">感想</span>
         <div class="detail-impressions">
           ${impressionsHtml}
