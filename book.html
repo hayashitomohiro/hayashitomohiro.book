@@ -59,7 +59,7 @@
   let impressionsHtml = "";
   if (impressions.length) {
     impressionsHtml = impressions.map((entry, i) => `
-      <details class="impression-entry" open>
+      <details class="impression-entry">
         <summary class="impression-entry__date">${entry.date || "（日付未記入）"}</summary>
         <p class="detail-text">${entry.text}</p>
       </details>
